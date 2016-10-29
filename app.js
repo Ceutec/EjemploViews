@@ -10,7 +10,8 @@ app.set('view engine', 'ejs');
 
 // index page 
 app.get('/', function(req, res) {
-    res.render('index');
+    res.render('index', {mensajes: ["hola!","este es otro mensaje",
+                                  "no quiero hablar con nadie","adios"]});
 });
 
 app.listen(8000);
