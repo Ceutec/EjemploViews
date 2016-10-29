@@ -10,8 +10,11 @@ app.set('view engine', 'ejs');
 
 // index page 
 app.get('/', function(req, res) {
-    res.render('index', {mensajes: ["hola!","este es otro mensaje",
-                                  "no quiero hablar con nadie","adios"]});
+    res.render('index', {usuarios: [
+                                     {nombre: "lolo", correo: "lolo@x.com"},
+                                     {nombre: "lola", correo: "lola@x.com"}
+                                   ]
+                         });
 });
 
 app.listen(8000);
