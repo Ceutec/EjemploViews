@@ -10,11 +10,8 @@ app.set('view engine', 'ejs');
 
 // index page 
 app.get('/', function(req, res) {
-    res.render('index', {usuarios: [
-                                     {nombre: "lolo", correo: "lolo@x.com"},
-                                     {nombre: "lola", correo: "lola@x.com"}
-                                   ]
-                         });
+
+    res.render('index', { mi_parametro: req.query.mi_parametro });
 });
 
 app.listen(8000);

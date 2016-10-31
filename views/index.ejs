@@ -1,7 +1,11 @@
 <h1>Prueba</h1>
 
-<ul>
-  <% for(var i=0; i<usuarios.length; i++) { %>
-    <li><%= usuarios[i].nombre %>: <%= usuarios[i].correo %></li>
-  <% } %>
-</ul>
+<h2>Consulta</h2>
+
+<form action="http://localhost:8000/" method="get">
+  Mi Parametro: <input type="text" name="mi_parametro"><br>
+  <input type="submit" value="Submit">
+</form>
+
+<h2>Respuesta</h2>
+<p>El parametro ingresado fue: <%= mi_parametro %>
